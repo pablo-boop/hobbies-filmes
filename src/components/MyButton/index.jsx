@@ -3,15 +3,13 @@ import styles from './styles';
 
 import { useNavigation } from '@react-navigation/native';
 
-import MyButtonText from '../MyButtonText';
-
-const MyButton = ({ screen, name }) => {
+const MyButton = () => {
 
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(screen)}>
-            <MyButtonText textButton={name}/>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
+            <Text>Home</Text>
         </TouchableOpacity>
     )
 }
